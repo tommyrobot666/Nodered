@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Nodes/Node_miner.gd" type="Script" id=1]
+
+[node name="Miner" type="GraphNode"]
+margin_right = 100.0
+margin_bottom = 60.0
+title = "Miner"
+show_close = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 0.988235, 0.615686, 0.705882, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 1
+slot/0/right_color = Color( 0.192157, 0.568627, 0.654902, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0.721569, 0.215686, 0.215686, 1 )
+custom_colors/font_outline_modulate = Color( 0.290196, 0.333333, 0.521569, 1 )
+custom_colors/font_color_shadow = Color( 0.192157, 0.678431, 0.278431, 1 )
+text = "0"
+[connection signal="close_request" from="." to="." method="_on_Miner_close_request"]

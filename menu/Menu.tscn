@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://menu/title.png" type="Texture" id=1]
+[ext_resource path="res://menu/menu.png" type="Texture" id=2]
+[ext_resource path="res://menu/Menu.gd" type="Script" id=3]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -56.4925
+margin_top = 3.89604
+margin_right = -56.4926
+margin_bottom = 3.89606
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 501.0
+margin_top = 411.0
+margin_right = 609.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Sprite" parent="."]
+position = Vector2( 572.398, 286.256 )
+scale = Vector2( 2.29502, 2.27519 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="menu"]
+margin_left = -24.6153
+margin_top = 62.5028
+margin_right = 15.3847
+margin_bottom = 76.5028
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Sprite" parent="menu"]
+position = Vector2( 13.7643, -99.4179 )
+scale = Vector2( 3.00759, 2.00923 )
+texture = ExtResource( 1 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
